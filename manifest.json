@@ -6,6 +6,13 @@
   "background": {
     "service_worker": "js/background.js"
   },
+  "content_scripts": [
+    {
+      "matches": ["https://global.americanexpress.com/offers/*"],
+      "run_at": "document_end",
+      "js": ["js/contentScript.js"]
+    }
+  ],
   "action": {
     "default_icon": {
       "16": "/images/icon_16x16.png",
